@@ -9,8 +9,18 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
-import { StatusBar } from '@ionic-native/status-bar';
+import { StatusBar } from '@ionic-native/status-bar'; 
 import { SplashScreen } from '@ionic-native/splash-screen';
+/* 검색 부분 */
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+/* 탭 페이지 */
+import { ItemonePage } from '../pages/itemone/itemone'
+import { ItemtwoPage } from '../pages/itemtwo/itemtwo'
+import { ItemthreePage } from '../pages/itemthree/itemthree'
+
 
 @NgModule({
   declarations: [
@@ -18,11 +28,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    ItemonePage,
+    ItemtwoPage,
+    ItemthreePage
   ],
   imports: [
     LoginPageModule,
     BrowserModule,
+    BrowserAnimationsModule, //검색 부분 모듈 추가
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -31,7 +44,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    ItemonePage,
+    ItemtwoPage,
+    ItemthreePage
   ],
   providers: [
     StatusBar,
