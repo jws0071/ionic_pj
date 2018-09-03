@@ -7,7 +7,7 @@ import { ItemtwoPage } from '../itemtwo/itemtwo'
 import { ItemthreePage } from '../itemthree/itemthree'
 
 
-import { trigger, style, state } from '@angular/core'  // 검색부분 Import
+import { trigger, style, state, transition, animate  } from '@angular/core'  // 검색부분 Import
 
 
 
@@ -21,12 +21,13 @@ import { trigger, style, state } from '@angular/core'  // 검색부분 Import
         })),
         state('invisible', style({
           opacity: 0
-        }))
+        })),
+        transition('* => *', animate('.5s'))
       ])
   ]
 })
 export class HomePage {
-	visibleState = 'invisible';
+  visibleState = 'invisible';
 
 	tab1Root = ItemonePage;
   tab2Root = ItemtwoPage;

@@ -1,10 +1,18 @@
+
 <ion-header>
   
   <ion-navbar>
   </ion-navbar>
   <ion-toolbar color='primary'>
-      <ion-searchbar [@mysearchbar]='visibleState' showCancelButton="True" placeholder="검색" animated="True">
-        </ion-searchbar>
+      <ion-buttons left>
+          <button ion-button menuToggle>
+            <ion-icon name="menu-icon"></ion-icon>
+          </button>
+        </ion-buttons>
+    
+      <ion-searchbar 
+        [@mysearchbar]='visibleState'   showCancelButton="True" placeholder="검색" animated="True">
+      </ion-searchbar>
         <ion-buttons right>
           <button (click)="toggleVisible()" ion-button icon-only >
             <ion-icon name="search-icon" ></ion-icon>
