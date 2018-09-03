@@ -13,9 +13,12 @@
       <ion-searchbar 
         [@mysearchbar]='visibleState'   showCancelButton="True" placeholder="검색" animated="True">
       </ion-searchbar>
-        <ion-buttons right>
-          <button (click)="toggleVisible()" ion-button icon-only >
-            <ion-icon name="search-icon" ></ion-icon>
+      <ion-buttons right>
+          <button *ngIf="visibleState == 'invisible'" (click)="toggleVisible()" ion-button icon-only>
+            <ion-icon name='search-icon'></ion-icon>
+          </button>
+          <button *ngIf="visibleState == 'visible'" (click)="toggleVisible()" ion-button icon-only>
+            <ion-icon name='close'></ion-icon>
           </button>
         </ion-buttons>
   </ion-toolbar>

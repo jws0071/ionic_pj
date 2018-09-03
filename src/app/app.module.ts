@@ -15,6 +15,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+/* 애니메이션 추가 */
+
+//import { AnimationService, AnimatesDirective  } from 'css-animator';
+
 
 /* 탭 페이지 */
 import { ItemonePage } from '../pages/itemone/itemone'
@@ -30,7 +34,8 @@ import { ItemthreePage } from '../pages/itemthree/itemthree'
     HomePage,
     ItemonePage,
     ItemtwoPage,
-    ItemthreePage
+    ItemthreePage,
+    //AnimatesDirective // 애니메이션 추가
   ],
   imports: [
     LoginPageModule,
@@ -51,7 +56,8 @@ import { ItemthreePage } from '../pages/itemthree/itemthree'
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    //AnimationService // 애니메이션 추가
   ]
 })
 export class AppModule {}

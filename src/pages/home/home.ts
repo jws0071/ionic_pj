@@ -22,7 +22,13 @@ import { trigger, style, state, transition, animate  } from '@angular/core'  // 
         state('invisible', style({
           opacity: 0
         })),
-        transition('* => *', animate('.5s'))
+        transition('invisible => visible', [
+          style({transform: 'translateX(100%)', opacity:'0'}),
+          animate('700ms ease-out')
+        ]),
+        transition('visible => invisible', [
+            animate('700ms ease-in', style({transform: 'translateX(100%)', opacity:'0'}))
+        ])
       ])
   ]
 })
